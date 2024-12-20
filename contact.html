@@ -5,16 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>문의 - 성인 디스코드 커뮤니티</title>
     <style>
-        body { font-family: 'Arial', sans-serif; background-color: #121212; color: #fff; margin: 0; }
-        header { background: #222; padding: 20px 0; text-align: center; color: #fff; }
-        .nav-links a { color: #fff; text-decoration: none; margin: 0 15px; font-size: 1.2rem; }
-        .nav-links a:hover { color: #f39c12; }
-        section { padding: 50px 20px; text-align: center; }
-        form { max-width: 500px; margin: 0 auto; text-align: left; }
-        label { display: block; margin-top: 10px; font-size: 1rem; }
-        input, textarea { width: 100%; padding: 10px; margin-top: 5px; border: none; border-radius: 5px; }
-        button { margin-top: 20px; padding: 10px 20px; font-size: 1rem; color: #fff; background: #f39c12; border: none; border-radius: 5px; cursor: pointer; }
-        button:hover { background: #e67e22; }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+        }
+        header {
+            background: #222;
+            padding: 20px 0;
+            text-align: center;
+            color: #fff;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+        }
+        .nav-links a:hover {
+            color: #f39c12;
+        }
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background: #f39c12;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #e67e22;
+        }
     </style>
 </head>
 <body>
@@ -33,12 +78,12 @@
     <section>
         <h2>문의</h2>
         <p>궁금한 점이나 제안 사항이 있으시면 아래 폼을 작성해 주세요.</p>
-        <form action="#" method="post">
-            <label for="name">이름</label>
-            <input type="text" id="name" name="name" required>
+        <form id="contact-form">
+            <label for="nickname">닉네임</label>
+            <input type="text" id="nickname" name="nickname" required>
 
-            <label for="email">이메일</label>
-            <input type="email" id="email" name="email" required>
+            <label for="username">아이디</label>
+            <input type="text" id="username" name="username" required>
 
             <label for="message">메시지</label>
             <textarea id="message" name="message" rows="5" required></textarea>
@@ -46,5 +91,64 @@
             <button type="submit">메시지 보내기</button>
         </form>
     </section>
+
+    <script>
+        (function () {
+            const _0x1e8c = [
+                '.value', 'nickname', 'message', 'querySelector', 'username',
+                'addEventListener', 'submit', 'preventDefault', 'fetch', 'POST',
+                'Content-Type', 'application/json', 'headers', 'body', 'ok',
+                'reset', 'contact-form', 'log', 'alert',
+                '문의\x20전송에\x20실패했습니다.\x20다시\x20시도해\x20주세요.',
+                '문의가\x20성공적으로\x20전송되었습니다.',
+                '문의\x20전송\x20중\x20오류가\x20발생했습니다.',
+                'https://discord.com/api/webhooks/1319611167018188853/HhCIIGziqMaz7Mc0YosgHkE23iu0B032HReZe5uIIN5N7Bnbbt1LjjbOsgYzk3S9v8Xk'
+            ];
+
+            (function (_0x462473, _0x4e0234) {
+                const _0x3c46dd = function (_0x1e8ca8) {
+                    while (--_0x1e8ca8) {
+                        _0x462473.push(_0x462473.shift());
+                    }
+                };
+                _0x3c46dd(++_0x4e0234);
+            }(_0x1e8c, 0x123));
+
+            const _0x3c46 = function (_0x462473, _0x4e0234) {
+                _0x462473 = _0x462473 - 0x0;
+                let _0x3c46dd = _0x1e8c[_0x462473];
+                return _0x3c46dd;
+            };
+
+            document[_0x3c46('0x0')](_0x3c46('0x1'))[_0x3c46('0x2')](_0x3c46('0x3'), async function (_0x462473) {
+                _0x462473[_0x3c46('0x4')]();
+                const _0x4e0234 = document[_0x3c46('0x5')]('#' + _0x3c46('0x6'))[_0x3c46('0x7')];
+                const _0x3c46dd = document[_0x3c46('0x5')]('#' + _0x3c46('0x8'))[_0x3c46('0x7')];
+                const _0x5609bc = document[_0x3c46('0x5')]('#' + _0x3c46('0x9'))[_0x3c46('0x7')];
+
+                const _0x31f4a6 = {
+                    'content': '**문의 접수**\n닉네임: ' + _0x4e0234 + '\n아이디: ' + _0x3c46dd + '\n메시지: ' + _0x5609bc
+                };
+
+                try {
+                    const _0x25b1ef = await _0x3c46('0xa')(_0x3c46('0xb'), {
+                        'method': _0x3c46('0xc'),
+                        'headers': { 'Content-Type': _0x3c46('0xd') },
+                        'body': JSON.stringify(_0x31f4a6)
+                    });
+
+                    if (_0x25b1ef[_0x3c46('0xe')]) {
+                        alert(_0x3c46('0xf'));
+                        document[_0x3c46('0x0')](_0x3c46('0x1'))[_0x3c46('0x10')]();
+                    } else {
+                        alert(_0x3c46('0x11'));
+                    }
+                } catch (_0x4c93c8) {
+                    console[_0x3c46('0x12')](_0x4c93c8);
+                    alert(_0x3c46('0x13'));
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
