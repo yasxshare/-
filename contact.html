@@ -117,6 +117,15 @@
                 content: `**문의 접수**\n닉네임: ${nickname}\n아이디: ${username}\n메시지: ${message}`
             };
 
+            const lastSentTime = localStorage.getItem("lastSentTime");
+            const currentTime = new Date().getTime();
+
+            if (lastSentTime && currentTime - lastSentTime < 3600000) { // 3600000ms = 1시간
+                responseMessage.textContent = "한 시간에 한 번만 전송할 수 있습니다.";
+                responseMessage.className = "error";
+                return;
+            }
+
             try {
                 const response = await fetch(webhookURL, {
                     method: "POST",
@@ -130,6 +139,8 @@
                     responseMessage.textContent = "전송 완료되었습니다.";
                     responseMessage.className = "success";
                     document.getElementById("contact-form").reset();
+
+                    localStorage.setItem("lastSentTime", currentTime);
                 } else {
                     responseMessage.textContent = "전송에 실패했습니다. 다시 시도해 주세요.";
                     responseMessage.className = "error";
