@@ -22,6 +22,26 @@
             padding: 20px 0; 
             text-align: center; 
             color: #fff; 
+            position: relative; 
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #f39c12;
+            text-decoration: none;
+            position: relative;
+        }
+        .logo::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 3px;
+            background: #f39c12;
+            margin: 5px auto 0;
+            transition: width 0.3s ease;
+        }
+        .logo:hover::after {
+            width: 100%;
         }
         .nav-links a { 
             color: #fff; 
@@ -49,40 +69,6 @@
         .btn:hover {
             background: #e67e22;
         }
-        .section { 
-            padding: 50px 20px; 
-            text-align: center; 
-        }
-        .section h2 { 
-            margin-bottom: 20px; 
-            font-size: 2rem; 
-        }
-        .section p { 
-            font-size: 1rem; 
-            line-height: 1.5; 
-        }
-        .reviews { 
-            background: #222; 
-        }
-        .review-list { 
-            display: flex; 
-            justify-content: center; 
-            flex-wrap: wrap; 
-            gap: 20px; 
-            margin-top: 20px; 
-        }
-        .review { 
-            background: #333; 
-            padding: 20px; 
-            border-radius: 10px; 
-            max-width: 300px; 
-            color: #fff; 
-        }
-        .review .author { 
-            margin-top: 15px; 
-            font-size: 0.9rem; 
-            color: #bbb; 
-        }
         footer { 
             background: #222; 
             text-align: center; 
@@ -95,7 +81,7 @@
 <body>
     <header>
         <nav class="navbar">
-            <a href="index.html" class="logo">새로운 별자리</a>
+            <a href="/" class="logo">새로운 별자리</a>
             <div class="nav-links">
                 <a href="about.html">소개</a>
                 <a href="features.html">특징</a>
@@ -109,24 +95,6 @@
         <h1>독점적인 성인 디스코드 커뮤니티</h1>
         <p>안전하고 활발한 공간에서 비슷한 생각을 가진 사람들과 교류하세요.</p>
         <a href="join.html" class="btn">서버 가입하기</a>
-    </section>
-
-    <section class="section reviews">
-        <h2>회원 리뷰</h2>
-        <div class="review-list">
-            <div class="review">
-                <p>"여기에서 만난 사람들은 정말 훌륭해요! 이 커뮤니티 덕분에 새로운 취미를 시작했습니다."</p>
-                <span class="author">- 김현지</span>
-            </div>
-            <div class="review">
-                <p>"안전한 환경에서 대화할 수 있다는 것이 정말 마음에 듭니다."</p>
-                <span class="author">- 박민수</span>
-            </div>
-            <div class="review">
-                <p>"매주 열리는 이벤트는 늘 기대돼요! 정말 재미있습니다."</p>
-                <span class="author">- 이은지</span>
-            </div>
-        </div>
     </section>
 
     <footer>
