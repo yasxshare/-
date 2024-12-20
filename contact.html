@@ -93,62 +93,38 @@
     </section>
 
     <script>
-        (function () {
-            const _0x1e8c = [
-                '.value', 'nickname', 'message', 'querySelector', 'username',
-                'addEventListener', 'submit', 'preventDefault', 'fetch', 'POST',
-                'Content-Type', 'application/json', 'headers', 'body', 'ok',
-                'reset', 'contact-form', 'log', 'alert',
-                '문의\x20전송에\x20실패했습니다.\x20다시\x20시도해\x20주세요.',
-                '문의가\x20성공적으로\x20전송되었습니다.',
-                '문의\x20전송\x20중\x20오류가\x20발생했습니다.',
-                'https://discord.com/api/webhooks/1319611167018188853/HhCIIGziqMaz7Mc0YosgHkE23iu0B032HReZe5uIIN5N7Bnbbt1LjjbOsgYzk3S9v8Xk'
-            ];
+        document.getElementById("contact-form").addEventListener("submit", async (event) => {
+            event.preventDefault();
 
-            (function (_0x462473, _0x4e0234) {
-                const _0x3c46dd = function (_0x1e8ca8) {
-                    while (--_0x1e8ca8) {
-                        _0x462473.push(_0x462473.shift());
-                    }
-                };
-                _0x3c46dd(++_0x4e0234);
-            }(_0x1e8c, 0x123));
+            const nickname = document.getElementById("nickname").value;
+            const username = document.getElementById("username").value;
+            const message = document.getElementById("message").value;
 
-            const _0x3c46 = function (_0x462473, _0x4e0234) {
-                _0x462473 = _0x462473 - 0x0;
-                let _0x3c46dd = _0x1e8c[_0x462473];
-                return _0x3c46dd;
+            const webhookURL = "https://discord.com/api/webhooks/1319611167018188853/HhCIIGziqMaz7Mc0YosgHkE23iu0B032HReZe5uIIN5N7Bnbbt1LjjbOsgYzk3S9v8Xk";
+            const payload = {
+                content: `**문의 접수**\n닉네임: ${nickname}\n아이디: ${username}\n메시지: ${message}`
             };
 
-            document[_0x3c46('0x0')](_0x3c46('0x1'))[_0x3c46('0x2')](_0x3c46('0x3'), async function (_0x462473) {
-                _0x462473[_0x3c46('0x4')]();
-                const _0x4e0234 = document[_0x3c46('0x5')]('#' + _0x3c46('0x6'))[_0x3c46('0x7')];
-                const _0x3c46dd = document[_0x3c46('0x5')]('#' + _0x3c46('0x8'))[_0x3c46('0x7')];
-                const _0x5609bc = document[_0x3c46('0x5')]('#' + _0x3c46('0x9'))[_0x3c46('0x7')];
+            try {
+                const response = await fetch(webhookURL, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(payload)
+                });
 
-                const _0x31f4a6 = {
-                    'content': '**문의 접수**\n닉네임: ' + _0x4e0234 + '\n아이디: ' + _0x3c46dd + '\n메시지: ' + _0x5609bc
-                };
-
-                try {
-                    const _0x25b1ef = await _0x3c46('0xa')(_0x3c46('0xb'), {
-                        'method': _0x3c46('0xc'),
-                        'headers': { 'Content-Type': _0x3c46('0xd') },
-                        'body': JSON.stringify(_0x31f4a6)
-                    });
-
-                    if (_0x25b1ef[_0x3c46('0xe')]) {
-                        alert(_0x3c46('0xf'));
-                        document[_0x3c46('0x0')](_0x3c46('0x1'))[_0x3c46('0x10')]();
-                    } else {
-                        alert(_0x3c46('0x11'));
-                    }
-                } catch (_0x4c93c8) {
-                    console[_0x3c46('0x12')](_0x4c93c8);
-                    alert(_0x3c46('0x13'));
+                if (response.ok) {
+                    alert("문의가 성공적으로 전송되었습니다.");
+                    document.getElementById("contact-form").reset();
+                } else {
+                    alert("문의 전송에 실패했습니다. 다시 시도해 주세요.");
                 }
-            });
-        })();
+            } catch (error) {
+                console.error("Error:", error);
+                alert("문의 전송 중 오류가 발생했습니다.");
+            }
+        });
     </script>
 </body>
 </html>
