@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문의 - 성인 디스코드 커뮤니티</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; background-color: #121212; color: #fff; margin: 0; }
+        header { background: #222; padding: 20px 0; text-align: center; color: #fff; }
+        .nav-links a { color: #fff; text-decoration: none; margin: 0 15px; font-size: 1.2rem; }
+        .nav-links a:hover { color: #f39c12; }
+        section { padding: 50px 20px; text-align: center; }
+        form { max-width: 500px; margin: 0 auto; text-align: left; }
+        label { display: block; margin-top: 10px; font-size: 1rem; }
+        input, textarea { width: 100%; padding: 10px; margin-top: 5px; border: none; border-radius: 5px; }
+        button { margin-top: 20px; padding: 10px 20px; font-size: 1rem; color: #fff; background: #f39c12; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #e67e22; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">성인 디스코드</a>
+            <div class="nav-links">
+                <a href="index.html">홈</a>
+                <a href="about.html">소개</a>
+                <a href="features.html">특징</a>
+                <a href="join.html">가입하기</a>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <h2>문의</h2>
+        <p>궁금한 점이나 제안 사항이 있으시면 아래 폼을 작성해 주세요.</p>
+        <form action="#" method="post">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">메시지</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">메시지 보내기</button>
+        </form>
+    </section>
+</body>
+</html>
