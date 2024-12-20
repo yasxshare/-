@@ -6,10 +6,19 @@
     <title>특징 - 성인 디스코드 커뮤니티</title>
     <style>
         body { font-family: 'Arial', sans-serif; background-color: #121212; color: #fff; margin: 0; }
-        header { background: #222; padding: 20px 0; text-align: center; color: #fff; }
-        .nav-links a { color: #fff; text-decoration: none; margin: 0 15px; font-size: 1.2rem; }
+        header { background: #222; padding: 20px 0; text-align: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); }
+        .logo { font-size: 1.8rem; color: #f39c12; text-transform: uppercase; font-weight: bold; }
+        .nav-links a { color: #fff; text-decoration: none; margin: 0 15px; font-size: 1.2rem; transition: color 0.3s; }
         .nav-links a:hover { color: #f39c12; }
-        section { padding: 50px 20px; text-align: center; }
+        section { padding: 60px 20px; text-align: center; }
+        h2 { font-size: 2.5rem; margin-bottom: 20px; color: #f39c12; }
+        ul { list-style: none; padding: 0; max-width: 800px; margin: 0 auto; }
+        li { margin: 20px 0; padding: 15px; background: #1e1e1e; border-radius: 10px; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); transition: transform 0.3s, box-shadow 0.3s; }
+        li:hover { transform: scale(1.05); box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); }
+        li::before { content: '⭐'; margin-right: 10px; color: #f39c12; }
+        footer { background: #222; text-align: center; padding: 20px; color: #bbb; font-size: 0.9rem; }
+        footer a { color: #f39c12; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -34,5 +43,9 @@
             <li>주제별 토론</li>
         </ul>
     </section>
+
+    <footer>
+        <p>&copy; 2024 <a href="index.html">성인 디스코드 커뮤니티</a>. 모든 권리 보유.</p>
+    </footer>
 </body>
 </html>
