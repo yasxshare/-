@@ -4,77 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="의미 있는 대화와 교류를 위한 독점적인 성인 디스코드 커뮤니티에 가입하세요.">
-    <title>새로운 별자리</title>
+    <title>소개 - 성인 디스코드 커뮤니티</title>
     <link rel="icon" href="image/favicon.ico">
     <style>
-        body { 
-            font-family: 'Arial', sans-serif; 
-            background-color: #121212; 
-            color: #fff; 
-            margin: 0; 
-            padding: 0; 
-            display: flex; 
-            flex-direction: column; 
-            min-height: 100vh; 
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
-        header { 
-            background: #222; 
-            padding: 20px 0; 
-            text-align: center; 
-            color: #fff; 
-            position: relative; 
+        header {
+            background: #222;
+            padding: 20px 0;
+            text-align: center;
+            color: #fff;
         }
         .logo {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: bold;
             color: #f39c12;
             text-decoration: none;
+            display: inline-block;
             position: relative;
+            letter-spacing: 2px;
+        }
+        .logo::before {
+            content: '✨';
+            font-size: 1.5rem;
+            position: absolute;
+            left: -25px;
+            top: 50%;
+            transform: translateY(-50%);
         }
         .logo::after {
-            content: '';
-            display: block;
-            width: 50%;
-            height: 3px;
-            background: #f39c12;
-            margin: 5px auto 0;
-            transition: width 0.3s ease;
+            content: '✨';
+            font-size: 1.5rem;
+            position: absolute;
+            right: -25px;
+            top: 50%;
+            transform: translateY(-50%);
         }
-        .logo:hover::after {
-            width: 100%;
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
         }
-        .nav-links a { 
-            color: #fff; 
-            text-decoration: none; 
-            margin: 0 15px; 
-            font-size: 1.2rem; 
+        .nav-links a:hover {
+            color: #f39c12;
         }
-        .nav-links a:hover { 
-            color: #f39c12; 
+        section {
+            padding: 50px 20px;
+            text-align: center;
         }
-        .hero { 
-            text-align: center; 
-            padding: 100px 20px; 
-            background: #333; 
-            flex: 1; 
+        .team {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
         }
-        .btn { 
-            padding: 10px 20px; 
-            font-size: 1rem; 
-            color: #fff; 
-            background: #f39c12; 
-            text-decoration: none; 
-            border-radius: 5px; 
+        .member {
+            background: #333;
+            padding: 30px;
+            border-radius: 15px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
         }
-        .btn:hover {
-            background: #e67e22;
+        .member:hover {
+            transform: translateY(-10px);
         }
-        footer { 
-            background: #222; 
-            text-align: center; 
-            padding: 10px 0; 
-            color: #bbb; 
-            font-size: 0.9rem; 
+        .member img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+            border: 3px solid #f39c12;
+        }
+        .member h3 {
+            margin: 10px 0 5px;
+        }
+        .member p {
+            font-size: 0.95rem;
+            color: #bbb;
+        }
+        footer {
+            background: #222;
+            text-align: center;
+            padding: 10px 0;
+            color: #bbb;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -83,7 +109,7 @@
         <nav class="navbar">
             <a href="/" class="logo">새로운 별자리</a>
             <div class="nav-links">
-                <a href="about.html">소개</a>
+                <a href="index.html">홈</a>
                 <a href="features.html">특징</a>
                 <a href="join.html">가입하기</a>
                 <a href="contact.html">문의</a>
@@ -91,10 +117,35 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>독점적인 성인 디스코드 커뮤니티</h1>
-        <p>안전하고 활발한 공간에서 비슷한 생각을 가진 사람들과 교류하세요.</p>
-        <a href="join.html" class="btn">서버 가입하기</a>
+    <section>
+        <h2>소개</h2>
+        <p>우리 커뮤니티는 의미 있는 교류, 네트워킹 기회, 그리고 재미있는 활동을 찾는 성인들을 위해 설계되었습니다.</p>
+    </section>
+
+    <section>
+        <h2>운영진 소개</h2>
+        <div class="team">
+            <div class="member">
+                <img src="image/owner.jpg" alt="서버장 사진">
+                <h3>서버장: Ja A (기하은)</h3>
+                <p>커뮤니티 설립자이자 리더로, 서버의 전반적인 운영을 담당합니다.</p>
+            </div>
+            <div class="member">
+                <img src="image/admin1.jpg" alt="관리자 1 사진">
+                <h3>관리자: boros3</h3>
+                <p>이벤트와 활동을 기획하고, 커뮤니티 활성화를 책임집니다.</p>
+            </div>
+            <div class="member">
+                <img src="image/admin2.jpg" alt="관리자 2 사진">
+                <h3>관리자: 봇</h3>
+                <p>규칙 관리 및 멤버 지원을 맡고 있으며, 문제 해결을 돕습니다.</p>
+            </div>
+            <div class="member">
+                <img src="image/admin3.jpg" alt="관리자 3 사진">
+                <h3>관리자: 수랑</h3>
+                <p>서버 기술 및 시스템 최적화를 통해 원활한 운영을 돕습니다.</p>
+            </div>
+        </div>
     </section>
 
     <footer>
