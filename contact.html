@@ -3,154 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>문의 - 네로의 신사적인 밤</title>
+    <title>네로의 신사적인 밤 - 가입하기</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #121212;
-            color: #fff;
-            margin: 0;
+        body { 
+            font-family: 'Arial', sans-serif; 
+            background-color: #121212; 
+            color: #fff; 
+            margin: 0; 
         }
-        header {
+        header { 
+            background: #222; 
+            padding: 20px 0; 
+            text-align: center; 
+            color: #fff; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+        }
+        .logo { 
+            font-size: 2rem; 
+            font-weight: bold; 
+            color: #f39c12; 
+            text-decoration: none; 
+        }
+        .nav-links a { 
+            color: #fff; 
+            text-decoration: none; 
+            margin: 0 15px; 
+            font-size: 1.2rem; 
+            transition: color 0.3s; 
+        }
+        .nav-links a:hover { 
+            color: #f39c12; 
+        }
+        section { 
+            padding: 80px 20px; 
+            text-align: center; 
+        }
+        h2 { 
+            font-size: 2.8rem; 
+            margin-bottom: 20px; 
+            color: #f39c12; 
+        }
+        p { 
+            font-size: 1.2rem; 
+            margin-bottom: 30px; 
+            color: #ddd; 
+            line-height: 1.6; 
+        }
+        .btn { 
+            padding: 15px 30px; 
+            font-size: 1.2rem; 
+            color: #fff; 
+            background: #f39c12; 
+            text-decoration: none; 
+            border-radius: 8px; 
+            transition: background 0.3s, transform 0.2s; 
+        }
+        .btn:hover { 
+            background: #e67e22; 
+            transform: scale(1.05); 
+        }
+        footer {
             background: #222;
-            padding: 20px 0;
             text-align: center;
-            color: #fff;
-        }
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2rem;
-        }
-        .nav-links a:hover {
-            color: #f39c12;
-        }
-        section {
-            padding: 50px 20px;
-            text-align: center;
-        }
-        form {
-            max-width: 500px;
-            margin: 0 auto;
-            text-align: left;
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-            font-size: 1rem;
-        }
-        input, textarea {
+            padding: 15px 0;
+            color: #bbb;
+            font-size: 0.9rem;
+            position: fixed;
+            bottom: 0;
             width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: none;
-            border-radius: 5px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
         }
-        button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 1rem;
-            color: #fff;
-            background: #f39c12;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        footer a { 
+            color: #f39c12; 
+            text-decoration: none; 
         }
-        button:hover {
-            background: #e67e22;
-        }
-        #response-message {
-            margin-top: 20px;
-            font-size: 1.2rem;
-        }
-        .success {
-            color: #28a745;
-        }
-        .error {
-            color: #dc3545;
+        footer a:hover { 
+            text-decoration: underline; 
         }
     </style>
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <a href="/" class="logo">네로의 신사적인 밤</a>
+            <a href="index.html" class="logo">네로의 신사적인 밤</a>
             <div class="nav-links">
                 <a href="index.html">홈</a>
                 <a href="about.html">소개</a>
                 <a href="features.html">특징</a>
-                <a href="join.html">가입하기</a>
+                <a href="contact.html">문의</a>
             </div>
         </nav>
     </header>
 
     <section>
-        <h2>문의</h2>
-        <p>궁금한 점이나 제안 사항이 있으시면 아래 폼을 작성해 주세요.</p>
-        <form id="contact-form">
-            <label for="nickname">닉네임</label>
-            <input type="text" id="nickname" name="nickname" required>
-
-            <label for="username">아이디</label>
-            <input type="text" id="username" name="username" required>
-
-            <label for="message">메시지</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button type="submit">메시지 보내기</button>
-        </form>
-        <div id="response-message"></div>
+        <h2>가입하고 함께하세요!</h2>
+        <p>안전하고 활발한 커뮤니티에 참여해 보세요.<br>서로의 경험을 공유하고 새로운 인연을 만나보세요!</p>
+        <a href="https://discord.com/invite/준비중" class="btn" target="_blank" rel="noopener noreferrer">서버 가입하기</a>
     </section>
 
-    <script>
-        document.getElementById("contact-form").addEventListener("submit", async (event) => {
-            event.preventDefault();
-
-            const nickname = document.getElementById("nickname").value;
-            const username = document.getElementById("username").value;
-            const message = document.getElementById("message").value;
-            const responseMessage = document.getElementById("response-message");
-
-            const webhookURL = "웹훅";
-            const payload = {
-                content: `**문의 접수**\n닉네임: ${nickname}\n아이디: ${username}\n메시지: ${message}`
-            };
-
-            const lastSentTime = localStorage.getItem("lastSentTime");
-            const currentTime = new Date().getTime();
-
-            if (lastSentTime && currentTime - lastSentTime < 3600000) { // 3600000ms = 1시간
-                responseMessage.textContent = "한 시간에 한 번만 전송할 수 있습니다.";
-                responseMessage.className = "error";
-                return;
-            }
-
-            try {
-                const response = await fetch(webhookURL, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(payload)
-                });
-
-                if (response.ok) {
-                    responseMessage.textContent = "전송 완료되었습니다.";
-                    responseMessage.className = "success";
-                    document.getElementById("contact-form").reset();
-
-                    localStorage.setItem("lastSentTime", currentTime);
-                } else {
-                    responseMessage.textContent = "전송에 실패했습니다. 다시 시도해 주세요.";
-                    responseMessage.className = "error";
-                }
-            } catch (error) {
-                console.error("Error:", error);
-                responseMessage.textContent = "전송 중 오류가 발생했습니다.";
-                responseMessage.className = "error";
-            }
-        });
-    </script>
+    <footer>
+        <p>&copy; 2024 <a href="index.html">성인 디스코드 커뮤니티</a>. 모든 권리 보유.</p>
+    </footer>
 </body>
 </html>
