@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>문의하기 - 네로의 신사적인 밤</title>
+    <meta name="description" content="의미 있는 대화와 교류를 위한 독점적인 성인 디스코드 커뮤니티에 가입하세요.">
+    <title>네로의 신사적인 밤</title>
+    <link rel="icon" href="image/favicon.ico">
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #121212;
-            color: #fff;
-            margin: 0;
+        body { 
+            font-family: 'Arial', sans-serif; 
+            background-color: #121212; 
+            color: #fff; 
+            margin: 0; 
+            padding: 0; 
+            display: flex; 
+            flex-direction: column; 
+            min-height: 100vh; 
         }
-        header {
-            background: #222;
-            padding: 20px 0;
-            text-align: center;
-            color: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        header { 
+            background: #222; 
+            padding: 20px 0; 
+            text-align: center; 
+            color: #fff; 
         }
         .logo {
             font-size: 2rem;
@@ -24,92 +29,42 @@
             color: #f39c12;
             text-decoration: none;
         }
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2rem;
-            transition: color 0.3s;
+        .nav-links a { 
+            color: #fff; 
+            text-decoration: none; 
+            margin: 0 15px; 
+            font-size: 1.2rem; 
         }
-        .nav-links a:hover {
-            color: #f39c12;
+        .hero { 
+            text-align: center; 
+            padding: 100px 20px; 
+            background: #333; 
+            flex: 1; 
         }
-        section {
-            padding: 80px 20px;
-            text-align: center;
+        .btn { 
+            padding: 10px 20px; 
+            font-size: 1rem; 
+            color: #fff; 
+            background: #f39c12; 
+            text-decoration: none; 
+            border-radius: 5px; 
         }
-        h2 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            color: #f39c12;
-        }
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            color: #ddd;
-            line-height: 1.6;
-        }
-        form {
-            max-width: 500px;
-            margin: 0 auto;
-            text-align: left;
-        }
-        label {
-            display: block;
-            margin-top: 15px;
-            font-size: 1rem;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            margin-top: 8px;
-            border: none;
-            border-radius: 8px;
-            background-color: #333;
-            color: #fff;
-        }
-        button {
-            margin-top: 30px;
-            padding: 15px 30px;
-            font-size: 1rem;
-            color: #fff;
-            background: #f39c12;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.3s, transform 0.2s;
-        }
-        button:hover {
+        .btn:hover {
             background: #e67e22;
-            transform: scale(1.05);
         }
-        #response-message {
-            margin-top: 30px;
-            font-size: 1.2rem;
-        }
-        .success {
-            color: #28a745;
-        }
-        .error {
-            color: #dc3545;
-        }
-        footer {
-            background: #222;
+        .content-section {
+            padding: 50px 20px;
             text-align: center;
-            padding: 15px 0;
-            color: #bbb;
-            font-size: 0.9rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+            background: #1e1e1e;
         }
-        footer a {
+        .content-section h2 {
             color: #f39c12;
-            text-decoration: none;
         }
-        footer a:hover {
-            text-decoration: underline;
+        footer { 
+            background: #222; 
+            text-align: center; 
+            padding: 10px 0; 
+            color: #bbb; 
         }
     </style>
 </head>
@@ -118,83 +73,48 @@
         <nav class="navbar">
             <a href="/" class="logo">네로의 신사적인 밤</a>
             <div class="nav-links">
-                <a href="index.html">홈</a>
                 <a href="about.html">소개</a>
                 <a href="features.html">특징</a>
                 <a href="join.html">가입하기</a>
+                <a href="gallery.html">사진</a>
+                <a href="inquiry.html">문의</a>
             </div>
         </nav>
     </header>
 
-    <section>
-        <h2>문의하기</h2>
-        <p>궁금한 점이나 제안 사항이 있으시면 아래 폼을 작성해 주세요.<br>운영진이 최대한 빠르게 답변 드리겠습니다.</p>
-        <form id="contact-form">
-            <label for="nickname">닉네임</label>
-            <input type="text" id="nickname" name="nickname" required>
+    <section class="hero">
+        <h1>독점적인 성인 디스코드 커뮤니티</h1>
+        <p>안전하고 활발한 공간에서 비슷한 생각을 가진 사람들과 교류하세요.</p>
+        <a href="join.html" class="btn">서버 가입하기</a>
+    </section>
 
-            <label for="username">아이디</label>
-            <input type="text" id="username" name="username" required>
-
-            <label for="message">메시지</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button type="submit">메시지 보내기</button>
-        </form>
-        <div id="response-message"></div>
+    <section class="content-section">
+        <h2>네로의 신사적인 밤 - 서버 소개</h2>
+        <p>2024.11.13 Open!<br>우리 지금 치킨하고 햄버거 주는 이벤트 하는데 이래도 안와? ㅠ</p>
+        <h3>「𝗪𝗲 𝗮𝗿𝗲! 우리 서버는요!」</h3>
+        <ul>
+            <li>서버를 열정적으로 사랑하는 관리진!</li>
+            <li>관리진 24시간 상주 중, 빠른 입장!</li>
+            <li>매콤달콤야릇한 이모지 다수 보유 중!</li>
+            <li>선을 지키는 신사적인 수위 서버!</li>
+            <li>수위 콘텐츠를 즐길 수 있는 다양한 오락거리들!</li>
+        </ul>
+        <h3>「𝗪𝗲 𝘄𝗮𝗻𝘁! 당신의 목에 걸리는 합격 목걸이!」</h3>
+        <ul>
+            <li>신사적으로 선을 지키며 활동하실 분!</li>
+            <li>서버 규칙을 숙지하고 활동하실 분!</li>
+            <li>서버 멤버들과 함께 잘 어울리실 분!</li>
+        </ul>
+        <h3>「𝗪𝗲 𝗱𝗼𝗻'𝘁 𝘄𝗮𝗻𝘁! 당신은 우리와 함께 할 수 없습니다!」</h3>
+        <ul>
+            <li>남미새, 여미새, 여왕벌</li>
+            <li>타 서버 블랙리스트</li>
+            <li>규칙을 숙지하지 않고 활동하시는 분</li>
+        </ul>
     </section>
 
     <footer>
-        <p>&copy; 2024 <a href="index.html">성인 디스코드 커뮤니티</a>. 모든 권리 보유.</p>
+        <p>&copy; 2024 네로의 신사적인 밤. 모든 권리 보유.</p>
     </footer>
-
-    <script>
-        document.getElementById("contact-form").addEventListener("submit", async (event) => {
-            event.preventDefault();
-
-            const nickname = document.getElementById("nickname").value;
-            const username = document.getElementById("username").value;
-            const message = document.getElementById("message").value;
-            const responseMessage = document.getElementById("response-message");
-
-            const webhookURL = "웹훅";
-            const payload = {
-                content: `**문의 접수**\n닉네임: ${nickname}\n아이디: ${username}\n메시지: ${message}`
-            };
-
-            const lastSentTime = localStorage.getItem("lastSentTime");
-            const currentTime = new Date().getTime();
-
-            if (lastSentTime && currentTime - lastSentTime < 3600000) { 
-                responseMessage.textContent = "한 시간에 한 번만 전송할 수 있습니다.";
-                responseMessage.className = "error";
-                return;
-            }
-
-            try {
-                const response = await fetch(webhookURL, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(payload)
-                });
-
-                if (response.ok) {
-                    responseMessage.textContent = "전송 완료되었습니다.";
-                    responseMessage.className = "success";
-                    document.getElementById("contact-form").reset();
-                    localStorage.setItem("lastSentTime", currentTime);
-                } else {
-                    responseMessage.textContent = "전송에 실패했습니다. 다시 시도해 주세요.";
-                    responseMessage.className = "error";
-                }
-            } catch (error) {
-                console.error("Error:", error);
-                responseMessage.textContent = "전송 중 오류가 발생했습니다.";
-                responseMessage.className = "error";
-            }
-        });
-    </script>
 </body>
 </html>
