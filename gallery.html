@@ -60,9 +60,6 @@
             max-height: 90%;
             border-radius: 10px;
         }
-        .modal:target {
-            display: flex;
-        }
         .modal .close {
             position: absolute;
             top: 10px;
@@ -102,41 +99,48 @@
     </header>
 
     <section class="gallery">
-        <a href="#img1"><img src="image/image1.jpg" alt="사진 1"></a>
-        <a href="#img2"><img src="image/image2.jpg" alt="사진 2"></a>
-        <a href="#img3"><img src="image/image3.jpg" alt="사진 3"></a>
-        <a href="#img4"><img src="image/image4.jpg" alt="사진 4"></a>
-        <a href="#img5"><img src="https://via.placeholder.com/300" alt="사진 5"></a>
+        <img src="image/image1.jpg" alt="사진 1" onclick="openModal('img1')">
+        <img src="image/image2.jpg" alt="사진 2" onclick="openModal('img2')">
+        <img src="image/image3.jpg" alt="사진 3" onclick="openModal('img3')">
+        <img src="image/image4.jpg" alt="사진 4" onclick="openModal('img4')">
+        <img src="https://via.placeholder.com/300" alt="사진 5" onclick="openModal('img5')">
     </section>
 
-    <!-- Modal 1 -->
+    <!-- Modal -->
     <div id="img1" class="modal">
-        <a href="#" class="close">&times;</a>
-        <img src="https://via.placeholder.com/300" alt="사진 1">
+        <a href="javascript:void(0);" class="close" onclick="closeModal('img1')">&times;</a>
+        <img src="image/image1.jpg" alt="사진 1">
     </div>
-    <!-- Modal 2 -->
     <div id="img2" class="modal">
-        <a href="#" class="close">&times;</a>
-        <img src="https://via.placeholder.com/300" alt="사진 2">
+        <a href="javascript:void(0);" class="close" onclick="closeModal('img2')">&times;</a>
+        <img src="image/image2.jpg" alt="사진 2">
     </div>
-    <!-- Modal 3 -->
     <div id="img3" class="modal">
-        <a href="#" class="close">&times;</a>
-        <img src="https://via.placeholder.com/300" alt="사진 3">
+        <a href="javascript:void(0);" class="close" onclick="closeModal('img3')">&times;</a>
+        <img src="image/image3.jpg" alt="사진 3">
     </div>
-    <!-- Modal 4 -->
     <div id="img4" class="modal">
-        <a href="#" class="close">&times;</a>
-        <img src="https://via.placeholder.com/300" alt="사진 4">
+        <a href="javascript:void(0);" class="close" onclick="closeModal('img4')">&times;</a>
+        <img src="image/image4.jpg" alt="사진 4">
     </div>
-    <!-- Modal 5 -->
     <div id="img5" class="modal">
-        <a href="#" class="close">&times;</a>
+        <a href="javascript:void(0);" class="close" onclick="closeModal('img5')">&times;</a>
         <img src="https://via.placeholder.com/300" alt="사진 5">
     </div>
 
     <footer>
         <p>&copy; 2024 성인 디스코드 커뮤니티. 모든 권리 보유.</p>
     </footer>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+    </script>
 </body>
 </html>
+
