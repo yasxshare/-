@@ -5,30 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>네로의 신사적인 밤 - 커뮤니티 소개</title>
     <style>
-        body { font-family: 'Arial', sans-serif; background-color: #121212; color: #fff; margin: 0; }
-        header { background: #222; padding: 20px 0; text-align: center; color: #fff; }
-        .logo { font-size: 2rem; font-weight: bold; color: #f39c12; text-decoration: none; }
-        .nav-links a { color: #fff; text-decoration: none; margin: 0 15px; font-size: 1.2rem; }
-        .nav-links a:hover { color: #f39c12; }
-        section { padding: 60px 20px; text-align: center; }
-        .team { display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; margin-top: 30px; }
-        .member { background: #333; padding: 30px; border-radius: 15px; width: 280px; text-align: center; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); }
-        .member img { border-radius: 50%; width: 100px; height: 100px; margin-bottom: 15px; }
-        .member h3 { margin: 10px 0 5px; font-size: 1.4rem; color: #f39c12; }
-        .member p { font-size: 1rem; color: #bbb; line-height: 1.5; }
-        footer {
-            background: #222;
-            text-align: center;
-            padding: 15px 0;
-            color: #bbb;
-            font-size: 0.9rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+        body { 
+            font-family: 'Arial', sans-serif; 
+            background-color: #121212; 
+            color: #fff; 
+            margin: 0;
+            padding: 0;
         }
-        footer a { color: #f39c12; text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
+        header { 
+            background: #222; 
+            padding: 20px 0; 
+            text-align: center; 
+            color: #fff; 
+        }
+        .logo { 
+            font-size: 2rem; 
+            font-weight: bold; 
+            color: #f39c12; 
+            text-decoration: none; 
+        }
+        .nav-links a { 
+            color: #fff; 
+            text-decoration: none; 
+            margin: 0 15px; 
+            font-size: 1.2rem; 
+        }
+        .nav-links a:hover { 
+            color: #f39c12; 
+        }
+        section { 
+            padding: 60px 20px; 
+            text-align: center; 
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .member { 
+            background: #333; 
+            padding: 30px; 
+            border-radius: 15px; 
+            text-align: center; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+            transition: transform 0.3s ease;
+        }
+        .member img { 
+            border-radius: 50%; 
+            width: 120px; 
+            height: 120px; 
+            margin-bottom: 15px; 
+        }
+        .member h3 { 
+            margin: 10px 0 5px; 
+            font-size: 1.4rem; 
+            color: #f39c12; 
+        }
+        .member p { 
+            font-size: 1rem; 
+            color: #bbb; 
+            line-height: 1.5; 
+        }
+        .member:hover {
+            transform: translateY(-10px);
+        }
+        footer { 
+            background: #222; 
+            text-align: center; 
+            padding: 15px 0; 
+            color: #bbb; 
+            font-size: 0.9rem; 
+            position: fixed; 
+            bottom: 0; 
+            width: 100%; 
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); 
+        }
+        footer a { 
+            color: #f39c12; 
+            text-decoration: none; 
+        }
+        footer a:hover { 
+            text-decoration: underline; 
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            section h4 {
+                font-size: 2.5rem;
+            }
+            section p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+            .nav-links a {
+                font-size: 1rem;
+            }
+            section h4 {
+                font-size: 2rem;
+            }
+            section p {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -44,11 +130,6 @@
             </div>
         </nav>
     </header>
-
-    <section>
-        <h4 style="font-size: 3rem; color: #f39c12;">네로의 신사적인 밤</h4>
-        <p style="font-size: 1.3rem; color: #ddd;">성인을 위한 독점 커뮤니티, 함께 성장하고 즐겨보세요.</p>
-    </section>
 
     <section>
         <h2>운영진 소개</h2>
