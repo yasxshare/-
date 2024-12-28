@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="의미 있는 대화와 교류를 위한 독점적인 성인 디스코드 커뮤니티에 가입하세요.">
+    <meta name="description" content="네로의 신사적인 밤 : 의미 있는 대화와 교류를 위한 독점적인 성인 디스코드 커뮤니티에 가입하세요.">
     <title>네로의 신사적인 밤</title>
     <link rel="icon" href="image/favicon.ico">
     <style>
@@ -52,12 +52,49 @@
         .btn:hover {
             background: #e67e22;
         }
-        .content-section {
-            padding: 50px 20px;
-            text-align: center;
-            background: #1e1e1e;
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        .content-section h2 {
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+        .modal .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: #fff;
+            font-size: 2rem;
+            text-decoration: none;
+        }
+        .modal .close:hover {
             color: #f39c12;
         }
         footer { 
@@ -88,33 +125,48 @@
         <a href="join.html" class="btn">서버 가입하기</a>
     </section>
 
-    <section class="content-section">
-        <h2>네로의 신사적인 밤 - 서버 소개</h2>
-        <p>2024.11.13 Open!<br>우리 지금 치킨하고 햄버거 주는 이벤트 하는데 이래도 안와? ㅠ</p>
-        <h3>「𝗪𝗲 𝗮𝗿𝗲! 우리 서버는요!」</h3>
-        <ul>
-            <li>서버를 열정적으로 사랑하는 관리진!</li>
-            <li>관리진 24시간 상주 중, 빠른 입장!</li>
-            <li>매콤달콤야릇한 이모지 다수 보유 중!</li>
-            <li>선을 지키는 신사적인 수위 서버!</li>
-            <li>수위 콘텐츠를 즐길 수 있는 다양한 오락거리들!</li>
-        </ul>
-        <h3>「𝗪𝗲 𝘄𝗮𝗻𝘁! 당신의 목에 걸리는 합격 목걸이!」</h3>
-        <ul>
-            <li>신사적으로 선을 지키며 활동하실 분!</li>
-            <li>서버 규칙을 숙지하고 활동하실 분!</li>
-            <li>서버 멤버들과 함께 잘 어울리실 분!</li>
-        </ul>
-        <h3>「𝗪𝗲 𝗱𝗼𝗻'𝘁 𝘄𝗮𝗻𝘁! 당신은 우리와 함께 할 수 없습니다!」</h3>
-        <ul>
-            <li>남미새, 여미새, 여왕벌</li>
-            <li>타 서버 블랙리스트</li>
-            <li>규칙을 숙지하지 않고 활동하시는 분</li>
-        </ul>
+    <section class="gallery">
+        <img src="image/image1.jpg" alt="사진 1" onclick="openModal('img1')">
+        <img src="image/image2.jpg" alt="사진 2" onclick="openModal('img2')">
+        <img src="image/image3.jpg" alt="사진 3" onclick="openModal('img3')">
+        <img src="image/image4.jpg" alt="사진 4" onclick="openModal('img4')">
+        <img src="https://via.placeholder.com/300" alt="사진 5" onclick="openModal('img5')">
     </section>
+
+    <!-- Modal -->
+    <div id="img1" class="modal">
+        <a href="javascript:void(0);" class="close" onclick="closeModal('img1')">&times;</a>
+        <img src="image/image1.jpg" alt="사진 1">
+    </div>
+    <div id="img2" class="modal">
+        <a href="javascript:void(0);" class="close" onclick="closeModal('img2')">&times;</a>
+        <img src="image/image2.jpg" alt="사진 2">
+    </div>
+    <div id="img3" class="modal">
+        <a href="javascript:void(0);" class="close" onclick="closeModal('img3')">&times;</a>
+        <img src="image/image3.jpg" alt="사진 3">
+    </div>
+    <div id="img4" class="modal">
+        <a href="javascript:void(0);" class="close" onclick="closeModal('img4')">&times;</a>
+        <img src="image/image4.jpg" alt="사진 4">
+    </div>
+    <div id="img5" class="modal">
+        <a href="javascript:void(0);" class="close" onclick="closeModal('img5')">&times;</a>
+        <img src="https://via.placeholder.com/300" alt="사진 5">
+    </div>
 
     <footer>
         <p>&copy; 2024 네로의 신사적인 밤. 모든 권리 보유.</p>
     </footer>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+    </script>
 </body>
 </html>
