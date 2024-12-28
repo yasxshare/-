@@ -47,18 +47,16 @@
             font-size: 1.3rem;
             color: #ddd;
         }
-        .team { 
-            display: flex; 
-            justify-content: center; 
-            flex-wrap: wrap; 
-            gap: 30px; 
-            margin-top: 30px; 
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
         }
         .member { 
             background: #333; 
             padding: 30px; 
             border-radius: 15px; 
-            width: 280px; 
             text-align: center; 
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
             transition: transform 0.3s ease;
@@ -103,14 +101,6 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .team {
-                flex-direction: column;
-                align-items: center;
-            }
-            .member {
-                width: 80%;
-                margin-bottom: 20px;
-            }
             section h4 {
                 font-size: 2.5rem;
             }
