@@ -3,28 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>사진 게시판</title>
+    <meta name="description" content="네로의 신사적인 밤 : 의미 있는 대화와 교류를 위한 독점적인 성인 디스코드 커뮤니티에 가입하세요.">
+    <title>네로의 신사적인 밤</title>
+    <link rel="icon" href="image/favicon.ico">
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #121212;
-            color: #fff;
-            margin: 0;
-            padding: 0;
+        body { 
+            font-family: 'Arial', sans-serif; 
+            background-color: #121212; 
+            color: #fff; 
+            margin: 0; 
+            padding: 0; 
+            display: flex; 
+            flex-direction: column; 
+            min-height: 100vh; 
         }
-        header {
-            background: #222;
-            padding: 20px 0;
-            text-align: center;
+        header { 
+            background: #222; 
+            padding: 20px 0; 
+            text-align: center; 
+            color: #fff; 
         }
-        header .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2rem;
-        }
-        header .nav-links a:hover {
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
             color: #f39c12;
+            text-decoration: none;
+        }
+        .nav-links a { 
+            color: #fff; 
+            text-decoration: none; 
+            margin: 0 15px; 
+            font-size: 1.2rem; 
+        }
+        .hero { 
+            text-align: center; 
+            padding: 100px 20px; 
+            background: #333; 
+            flex: 1; 
+        }
+        .btn { 
+            padding: 10px 20px; 
+            font-size: 1rem; 
+            color: #fff; 
+            background: #f39c12; 
+            text-decoration: none; 
+            border-radius: 5px; 
+        }
+        .btn:hover {
+            background: #e67e22;
         }
         .gallery {
             display: grid;
@@ -71,33 +97,32 @@
         .modal .close:hover {
             color: #f39c12;
         }
-        footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #222;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            font-size: 1rem;
+        footer { 
+            background: #222; 
+            text-align: center; 
+            padding: 10px 0; 
+            color: #bbb; 
+            position: fixed; /* 위치 고정 */
+            bottom: 0; /* 화면 하단에 고정 */
+            left: 0; 
+            width: 100%; /* 화면 전체 너비 */
+            z-index: 999; /* 다른 요소보다 위에 위치 */
         }
     </style>
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <a href="/" class="logo">사진 게시판</a>
+            <a href="/" class="logo">네로의 신사적인 밤</a>
             <div class="nav-links">
-                <a href="index.html">홈</a>
                 <a href="about.html">소개</a>
                 <a href="features.html">특징</a>
                 <a href="join.html">가입하기</a>
+                <a href="gallery.html">사진</a>
                 <a href="inquiry.html">문의</a>
             </div>
         </nav>
     </header>
-
     <section class="gallery">
         <img src="image/image1.jpg" alt="사진 1" onclick="openModal('img1')">
         <img src="image/image2.jpg" alt="사진 2" onclick="openModal('img2')">
@@ -129,7 +154,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 성인 디스코드 커뮤니티. 모든 권리 보유.</p>
+        <p>&copy; 2024 네로의 신사적인 밤. 모든 권리 보유.</p>
     </footer>
 
     <script>
@@ -143,4 +168,3 @@
     </script>
 </body>
 </html>
-
